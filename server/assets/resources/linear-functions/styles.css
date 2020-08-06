@@ -1,0 +1,144 @@
+.c-system {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(50vh - 220px);
+}
+.chart-point {
+  width: 24px;
+  height: 24px;
+  background: #cd0e66;
+  position: absolute;
+  transition: transform 0.2s, background 0.2s;
+  cursor: pointer;
+  pointer-events: none;
+}
+[dir] .chart-point {
+  border-radius: 12px;
+  margin: -12px;
+  transform: scale(0);
+}
+[dir] .chart-point.visible {
+  transform: scale(0.5);
+}
+.chart-point.fixed {
+  pointer-events: all;
+}
+[dir] .chart-point.fixed {
+  transform: none;
+}
+.chart-point:hover,
+.chart-point:active {
+  background: #f01e7f;
+}
+[dir] .chart-point:hover, [dir] .chart-point:active {
+  transform: scale(1.4);
+}
+.chart-label {
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  background: white;
+  line-height: 1;
+  display: none;
+}
+[dir] .chart-label {
+  border-radius: 4px;
+  padding: 1px 2px;
+}
+.chart-label.blue {
+  color: #0f82f2;
+}
+[dir] .chart-label.blue {
+  margin-top: 2px;
+}
+[dir=ltr] .chart-label.blue {
+  transform: translateX(-50%);
+}
+[dir=rtl] .chart-label.blue {
+  transform: translateX(50%);
+}
+.chart-label.green {
+  color: #22ab24;
+}
+[dir=ltr] .chart-label.green {
+  margin: -10px 0 0 5px;
+}
+[dir=rtl] .chart-label.green {
+  margin: -10px 5px 0 0;
+}
+.triangle {
+  display: none;
+  fill: rgba(205, 14, 102, 0.2);
+  transition: fill 0.2s;
+}
+.line-x {
+  display: none;
+  stroke: #0f82f2;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.line-y {
+  display: none;
+  stroke: #22ab24;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+[dir] x-coordinate-system {
+  margin: 0 auto 0.5em;
+}
+x-coordinate-system .grid,
+x-coordinate-system .axes,
+x-coordinate-system .plot,
+x-coordinate-system .labels {
+  transition: opacity 0.2s;
+}
+.focus x-coordinate-system .axes,
+.focus x-coordinate-system .plot,
+.focus x-coordinate-system .labels {
+  opacity: 0.1;
+}
+.focus x-coordinate-system .grid {
+  opacity: 0.01;
+}
+.focus x-coordinate-system .triangle {
+  fill: rgba(205, 14, 102, 0.05);
+}
+.focus x-coordinate-system .chart-point {
+  background: #f0b7d1;
+}
+x-coordinate-system .line-x,
+x-coordinate-system .line-y {
+  transition: stroke 0.2s;
+}
+.focus x-coordinate-system .line-x:not(.focus) {
+  stroke: #b7dafb;
+}
+.focus x-coordinate-system .line-y:not(.focus) {
+  stroke: #bde6bd;
+}
+x-coordinate-system .chart-label {
+  transition: color 0.2s;
+}
+.focus x-coordinate-system .chart-label.blue:not(.focus) {
+  color: #b7dafb;
+}
+.focus x-coordinate-system .chart-label.green:not(.focus) {
+  color: #bde6bd;
+}
+#intercept .arrow {
+  marker-start: url(#blue-circle);
+  marker-end: url(#blue-arrow);
+  stroke-width: 4px;
+  stroke: #fd8c00;
+}
+.pill {
+  line-height: 26px;
+  min-width: 26px;
+  box-sizing: border-box;
+}
+[dir=ltr] mn + mi.pill {
+  margin-left: 5px;
+}
+[dir=rtl] mn + mi.pill {
+  margin-right: 5px;
+}

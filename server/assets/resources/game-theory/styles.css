@@ -1,0 +1,50 @@
+.payoff-matrix td {
+  background: #c7def5;
+  color: rgba(0, 0, 0, 0.6);
+}[dir] .payoff-matrix td {
+  padding: 0.2em 1em;
+  border-bottom: 2px solid white;
+}[dir=ltr] .payoff-matrix td {
+  border-right: 2px solid white;
+}[dir=rtl] .payoff-matrix td {
+  border-left: 2px solid white;
+}
+.payoff-matrix tr:first-child td,
+.payoff-matrix td:first-child {
+  background: #99c7f4;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+}
+[dir=ltr] .payoff-matrix td:last-child {
+  border-right: none;
+}
+[dir=rtl] .payoff-matrix td:last-child {
+  border-left: none;
+}
+[dir] .payoff-matrix tr:last-child td {
+  border-bottom: none;
+}
+[dir=ltr] .payoff-matrix tr:first-child td:first-child {
+  border-top-left-radius: 6px;
+}
+[dir=rtl] .payoff-matrix tr:first-child td:first-child {
+  border-top-right-radius: 6px;
+}
+[dir=ltr] .payoff-matrix tr:first-child td:last-child {
+  border-top-right-radius: 6px;
+}
+[dir=rtl] .payoff-matrix tr:first-child td:last-child {
+  border-top-left-radius: 6px;
+}
+[dir=ltr] .payoff-matrix tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+[dir=rtl] .payoff-matrix tr:last-child td:first-child {
+  border-bottom-right-radius: 6px;
+}
+[dir=ltr] .payoff-matrix tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+[dir=rtl] .payoff-matrix tr:last-child td:last-child {
+  border-bottom-left-radius: 6px;
+}

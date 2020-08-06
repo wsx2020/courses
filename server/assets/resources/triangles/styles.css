@@ -1,0 +1,184 @@
+@media screen and (min-width: 680px) {
+  [dir] .shift-1 {
+    margin-top: -70px !important;
+  }
+}
+.space {
+  display: inline-block;
+  width: 20px;
+}
+.hover-target {
+  -webkit-touch-callout: none;
+  display: inline-block;
+  position: relative;
+  line-height: 28px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+[dir] .hover-target {
+  margin: -3px -6px;
+  padding: 0 6px;
+  border-radius: 5px;
+}
+.caption .hover-target {
+  height: 24px;
+  line-height: 24px;
+}
+.hover-target:before {
+  content: " ";
+  background: #7acd7c;
+  position: absolute;
+  height: 3px;
+  bottom: 0;
+}
+[dir=ltr] .hover-target:before {
+  left: 5px;
+  right: 5px;
+}
+[dir=rtl] .hover-target:before {
+  right: 5px;
+  left: 5px;
+}
+.hover-target:hover {
+  color: rgba(0, 0, 0, 0.8);
+  background: #7acd7c;
+}
+[dir] .hover-target:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.mountain {
+  background: white;
+  z-index: 100;
+}
+[dir] .mountain {
+  box-shadow: 0 0 30px 10px white;
+}
+.dark-mode .mountain {
+  background: #22212e;
+}
+[dir] .dark-mode .mountain {
+  box-shadow: 0 0 30px 10px #22212e;
+}
+.task {
+  color: #0f82f2;
+  font-weight: 600;
+}
+[dir] .task {
+  border-bottom: 2px solid #0f82f2;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.7em;
+}
+.middle {
+  width: 300px;
+  height: 300px;
+  top: calc(50vh - 150px);
+}
+[dir] .theorem .row.padded {
+  margin: -1em -24px -1em;
+}
+.theorem svg {
+  overflow: visible;
+}
+#pythagoras-proof x-geopad {
+  background: transparent;
+  position: relative;
+  stroke-linejoin: round;
+}
+#pythagoras-proof .tri {
+  fill: #82bbf4;
+}
+#pythagoras-proof.focus .tri:not(.focus) {
+  fill: #dee9f5;
+}
+#pythagoras-proof .square {
+  fill: #e181ae;
+}
+#pythagoras-proof.focus .square:not(.focus) {
+  fill: #f1dee7;
+}
+#pythagoras-proof .label {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+[dir=ltr] #pythagoras-proof .label {
+  transform: translate(-50%, -50%) scale(0.4);
+}
+[dir=rtl] #pythagoras-proof .label {
+  transform: translate(50%, -50%) scale(0.4);
+}
+#pythagoras-proof .label.visible {
+  opacity: 1;
+}
+[dir] #pythagoras-proof .label.visible {
+  transition-timing-function: linear, cubic-bezier(0.33, 1.9, 0.52, 0.7);
+}
+[dir=ltr] #pythagoras-proof .label.visible {
+  transform: translate(-50%, -50%) scale(1);
+}
+[dir=rtl] #pythagoras-proof .label.visible {
+  transform: translate(50%, -50%) scale(1);
+}
+#pythagoras-proof .similar-triangle .light {
+  opacity: 0.2;
+}
+[dir] .proof-table .pill {
+  border-radius: 12px;
+}
+[dir] .proof-table .pill mfrac {
+  margin: 0.2em 0;
+}
+[dir] .proof-table p {
+  margin-bottom: 8px !important;
+}
+#pythagorean-triples-grid circle.move {
+  fill: #0f82f2;
+  transition: r 0.2s;
+}
+#pythagorean-triples-grid .thick {
+  stroke: #0f82f2;
+  transition: none;
+}
+#pythagorean-triples-grid .label {
+  position: absolute;
+  background: #0f82f2;
+  color: white;
+}
+[dir] #pythagorean-triples-grid .label {
+  border-radius: 4px;
+  padding: 1px 8px;
+}
+[dir=ltr] #pythagorean-triples-grid .label {
+  transform: translate(-50%, -50%);
+}
+[dir=rtl] #pythagorean-triples-grid .label {
+  transform: translate(50%, -50%);
+}
+#pythagorean-triples-grid .triple circle.move {
+  fill: #22ab24;
+}
+#pythagorean-triples-grid .triple .thick {
+  stroke: #22ab24;
+  fill: rgba(34, 171, 36, 0.2);
+}
+#pythagorean-triples-grid .triple .label {
+  background: #22ab24;
+}
+.qed {
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+[dir] .qed {
+  border: 1px solid currentColor;
+  margin-top: 8px;
+}
+[dir=ltr] .qed {
+  float: right;
+}
+[dir=rtl] .qed {
+  float: left;
+}

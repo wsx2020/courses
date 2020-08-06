@@ -1,0 +1,64 @@
+article.casino .page-background {
+  background-image: url('/resources/chaos/images/felt.png'), -webkit-radial-gradient(50% 40%, circle farthest-corner, #527C14, #243a0a);
+  background-size: 180px 180px, auto;
+}[dir] article.casino .page-background {
+  transform: translate3D(0, 0, 0);
+}
+[dir] x-water-canvas canvas {
+  border-radius: 4px;
+}
+.butterfly {
+  width: 60px;
+  height: 43px;
+  background: url('/resources/chaos/images/butterfly.png');
+  background-size: cover;
+  position: absolute;
+  top: 220px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+[dir=ltr] .butterfly {
+  left: 170px;
+  transform: rotate(20deg);
+}
+[dir=rtl] .butterfly {
+  right: 170px;
+  transform: rotate(-20deg);
+}
+[dir=ltr] .butterfly.flap {
+  transform: rotate(20deg) scaleX(0.4);
+}
+[dir=rtl] .butterfly.flap {
+  transform: rotate(-20deg) scaleX(0.4);
+}
+.tornado {
+  width: 50px;
+  height: 60px;
+  background: url('/resources/chaos/images/tornado.png');
+  background-size: cover;
+  position: absolute;
+  top: 70px;
+  transition: transform 1s, opacity 1s;
+  opacity: 0;
+}
+[dir] .tornado {
+  transform: scale(0.4);
+  transform-origin: center bottom;
+}
+[dir=ltr] .tornado {
+  left: 70px;
+}
+[dir=rtl] .tornado {
+  right: 70px;
+}
+.tornado.active {
+  opacity: 1;
+}
+[dir] .tornado.active {
+  transform: scale(1);
+}
+.pool-table {
+  stroke: white;
+  fill: none;
+  stroke-width: 10px;
+}

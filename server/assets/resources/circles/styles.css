@@ -1,0 +1,729 @@
+x-solid {
+  display: block;
+  position: relative;
+}[dir] x-solid {
+  margin: 0 auto;
+}
+x-solid canvas {
+  max-width: 100%;
+  height: auto;
+}
+x-solid .label3d {
+  position: absolute;
+  line-height: 1.2;
+  font-style: italic;
+  pointer-events: none;
+}
+x-pi-scroll {
+  display: block;
+  overflow: scroll;
+  font-family: Courier, monospace;
+  -webkit-overflow-scrolling: touch;
+}
+x-pi-scroll .pi-wrap {
+  position: relative;
+}
+x-pi-scroll .pi-row {
+  position: absolute;
+  top: 0;
+}
+x-pi-scroll .pi-highlight {
+  display: none;
+  position: absolute;
+  height: 24px;
+}
+[dir] x-pi-scroll .pi-highlight {
+  border: 3px solid #cd0e66;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #cd0e66;
+}
+[dir=ltr] x-pi-scroll .pi-highlight {
+  margin-left: -3px;
+}
+[dir=rtl] x-pi-scroll .pi-highlight {
+  margin-right: -3px;
+}
+.similar-circles {
+  background: #f5f5f6;
+}
+[dir] .similar-circles {
+  border-radius: 4px;
+}
+.dark-mode .similar-circles {
+  background: #2d2c38;
+}
+.similar-circles .handle:not(.fixed) {
+  cursor: move;
+  transition: r 0.2s;
+  fill: #cd0e66;
+}
+.similar-circles .handle:not(.fixed):hover {
+  r: 20;
+}
+.similar-circles .outline {
+  fill: none;
+  stroke: #cd0e66;
+  stroke-width: 4px;
+  pointer-events: none;
+  transition: r 0.2s;
+}
+.similar-circles .outline-halo {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 40px;
+  cursor: ew-resize;
+}
+.similar-circles .burst {
+  fill: none;
+  stroke: #22ab24;
+}
+@media screen and (max-width: 480px) {
+  .similar-circles .handle {
+    r: 20;
+  }
+  .similar-circles .handle:hover {
+    r: 40;
+  }
+  .similar-circles .outline-halo {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 40px;
+    cursor: ew-resize;
+  }
+}
+.pi-spiral {
+  max-width: 100%;
+  width: 400px;
+}
+[dir] .pi-spiral {
+  margin: 1em auto;
+}
+#max-area x-select.segmented > * {
+  width: 80px;
+  font-size: 16px;
+}
+#max-area path {
+  fill: rgba(15, 130, 242, 0.1);
+  stroke: #22ab24;
+  stroke-width: 8px;
+  stroke-linejoin: round;
+}
+#max-area .var {
+  color: #0f82f2;
+}
+.circle-area {
+  overflow: visible;
+}
+.circle-area .circle path {
+  stroke: white;
+  stroke-width: 1.5px;
+}
+.circle-area .circle:first-child {
+  opacity: 0.5;
+}
+.circle-area.red .circle path {
+  fill: #cd0e66;
+}
+.circle-area.red .circle path:nth-child(2n) {
+  fill: #9d0b4e;
+}
+.circle-area.blue .circle path {
+  fill: #0f82f2;
+}
+.circle-area.blue .circle path:nth-child(2n) {
+  fill: #0b68c3;
+}
+.circle-area .labels line,
+.circle-area marker path {
+  fill: none;
+  stroke: #c5c2cc;
+  stroke-linecap: round;
+}
+.circle-area .labels line {
+  stroke-width: 2px;
+}
+.circle-area .labels text {
+  fill: #c5c2cc;
+  font-size: 16px;
+  font-style: italic;
+}
+.pi-grid {
+  display: flex;
+}
+.pi-left {
+  display: flex;
+}
+.pi-mid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+}
+.pi-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.pi-cell {
+  width: 24px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: opacity 0.2s;
+}
+.pi-cell.hide {
+  opacity: 0.2;
+}
+[dir] .pi-operator {
+  padding: 0 4px;
+}
+.pi-cell,
+.pi-operator {
+  height: 24px;
+  line-height: 24px;
+}
+[dir] .pi-cell, [dir] .pi-operator {
+  text-align: center;
+  border: 1px solid white;
+}
+.pi-legend {
+  display: flex;
+  justify-content: center;
+}
+.pi-legend .pi-cell {
+  color: white;
+}
+[dir] .pi-legend .pi-cell {
+  margin: 20px 3px 0 3px;
+}
+[dir] .pi-box {
+  padding: 0;
+}
+[dir] .pi-controls {
+  margin-bottom: 1px;
+  padding: 12px 20px 11px;
+  border-bottom: 1px solid white;
+}
+[dir=ltr] .pi-controls {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+[dir=rtl] .pi-controls {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.pi-controls:before,
+.pi-controls:after {
+  display: table;
+  content: " ";
+}
+[dir] .pi-controls:before, [dir] .pi-controls:after {
+  clear: both;
+}
+.pi-controls input {
+  background: white;
+  width: 120px;
+}
+[dir] .pi-controls input {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+[dir=ltr] .pi-controls input {
+  margin: -4px 0 -4px 8px;
+}
+[dir=rtl] .pi-controls input {
+  margin: -4px 8px -4px 0;
+}
+.pi-controls .pi-warning {
+  color: #cd0e66;
+  font-style: italic;
+}
+[dir=ltr] .pi-controls .pi-warning {
+  float: right;
+}
+[dir=rtl] .pi-controls .pi-warning {
+  float: left;
+}
+x-pi-scroll {
+  height: 300px;
+}
+[dir=ltr] x-pi-scroll {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 12px 20px 12px 40px;
+}
+[dir=rtl] x-pi-scroll {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding: 12px 40px 12px 20px;
+}
+[dir=ltr] x-pi-scroll .first-row {
+  margin: 0 0 -29px -24px;
+}
+[dir=rtl] x-pi-scroll .first-row {
+  margin: 0 -24px -29px 0;
+}
+.constellations {
+  position: relative;
+  overflow: hidden;
+  cursor: ew-resize;
+}
+.constellations .bg,
+.constellations .wheel,
+.constellations .fg {
+  background-size: cover;
+}
+.constellations .wheel,
+.constellations .fg {
+  position: absolute;
+  top: 24px;
+  width: 100%;
+}
+.constellations svg line {
+  stroke: #001327;
+  stroke-width: 2px;
+}
+.constellations .bg {
+  background-image: url(/resources/circles/images/star-wheel-1.svg);
+}
+[dir] .constellations .bg {
+  padding-bottom: 63%;
+}
+.constellations .wheel {
+  background-image: url(/resources/circles/images/star-wheel-2.svg);
+  will-change: transform;
+  height: 0;
+}
+[dir] .constellations .wheel {
+  padding-bottom: 100%;
+}
+.constellations .fg {
+  background-image: url(/resources/circles/images/star-wheel-3.svg);
+  pointer-events: none;
+}
+[dir] .constellations .fg {
+  padding-bottom: 63%;
+}
+.constellations .label {
+  background: #001327;
+  position: relative;
+  color: white;
+  width: 160px;
+  line-height: 24px;
+  font-size: 14px;
+}
+[dir] .constellations .label {
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+}
+.constellations .label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+[dir] .constellations .label:after {
+  border-top: 5px #001327 solid;
+}
+[dir=ltr] .constellations .label:after {
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px transparent solid;
+  border-right: 5px transparent solid;
+}
+[dir=rtl] .constellations .label:after {
+  right: 50%;
+  margin-right: -5px;
+  border-right: 5px transparent solid;
+  border-left: 5px transparent solid;
+}
+.constellations + x-gesture {
+  fill: rgba(0, 0, 0, 0.8);
+  stroke: rgba(255, 255, 255, 0.8);
+}
+[dir] #radians-conversion .space {
+  margin: 0 4px;
+}
+#radians-conversion .rotate {
+  display: inline-block;
+  font-size: 1.5em;
+}
+[dir] #radians-conversion .rotate {
+  margin: -0.4em 0 0.2em 0;
+}
+[dir=ltr] #radians-conversion .rotate.left {
+  transform: rotate(135deg);
+}
+[dir=rtl] #radians-conversion .rotate.left {
+  transform: rotate(-135deg);
+}
+[dir=ltr] #radians-conversion .rotate.right {
+  transform: rotate(45deg);
+}
+[dir=rtl] #radians-conversion .rotate.right {
+  transform: rotate(-45deg);
+}
+#radians-distance .earth {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  top: 40px;
+  background: url(/resources/circles/images/earth.svg);
+  background-size: contain;
+}
+[dir=ltr] #radians-distance .earth {
+  left: 40px;
+}
+[dir=rtl] #radians-distance .earth {
+  right: 40px;
+}
+#radians-distance .iss {
+  width: 57px;
+  height: 33px;
+  position: absolute;
+  top: 0;
+  left: 0 /* rtl:ignore */;
+  background: url(/resources/circles/images/iss.svg);
+  background-size: contain;
+}
+[dir] #radians-distance .iss {
+  margin: -17px -29px;
+}
+#radians-distance .time {
+  position: absolute;
+  top: 5px;
+  color: #cd0e66;
+  font-weight: 600;
+}
+[dir=ltr] #radians-distance .time {
+  left: 12px;
+}
+[dir=rtl] #radians-distance .time {
+  right: 12px;
+}
+.eqn-gap {
+  display: inline-block;
+}
+[dir] .eqn-gap {
+  margin: 0 8px;
+}
+.calculator {
+  background: #3a3645;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+[dir] .calculator {
+  padding: 8px;
+  border-radius: 6px;
+}
+.calculator:before,
+.calculator:after {
+  display: table;
+  content: " ";
+}
+[dir] .calculator:before, [dir] .calculator:after {
+  clear: both;
+}
+.calculator .display {
+  background: #c5c2cc;
+  position: relative;
+  font-size: 36px;
+  line-height: 40px;
+  height: 40px;
+}
+[dir] .calculator .display {
+  border-radius: 4px;
+  padding: 8px 14px;
+  margin: 6px 6px 12px 6px;
+}
+.calculator .display img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  display: none;
+}
+.calculator .button {
+  background: #5e5870;
+  width: 36px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+[dir] .calculator .button {
+  border-radius: 4px;
+  padding: 8px;
+  margin: 6px;
+  text-align: center;
+  box-shadow: 0 3px 0 #181824;
+}
+[dir=ltr] .calculator .button {
+  float: left;
+}
+[dir=rtl] .calculator .button {
+  float: right;
+}
+.calculator .button:hover {
+  background: #6a637e;
+}
+[dir] .calculator .button:active {
+  box-shadow: none;
+  transform: translateY(3px);
+}
+.calculator .button.wide {
+  width: 64px;
+}
+.calculator .button.num {
+  background: #255c9c;
+}
+.calculator .button.num:hover {
+  background: #2e74c5;
+}
+.calculator .button.mode {
+  background: #9c6123;
+}
+.calculator .button.mode:hover {
+  background: #c57b2c;
+}
+.calculator .setting {
+  position: absolute;
+  top: 4px;
+  background: #3a3645;
+  line-height: 12px;
+  font-size: 12px;
+  color: white;
+}
+[dir] .calculator .setting {
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+[dir=ltr] .calculator .setting {
+  right: 13px;
+}
+[dir=rtl] .calculator .setting {
+  left: 13px;
+}
+#eratosthenes-1 x-geopad {
+  background: none;
+}
+#eratosthenes-1 .sunrays {
+  display: block;
+  position: absolute;
+}
+#eratosthenes-1 .shadow {
+  fill: #ccc;
+  transition: fill 0.2s;
+}
+[dir] #eratosthenes-1 .obelisk {
+  transform-origin: center bottom;
+}
+#eratosthenes-1 .earth-cover.fill {
+  fill: transparent;
+}
+#eratosthenes-1.focus .sunrays {
+  opacity: 0.2;
+}
+#eratosthenes-1.focus .shadow {
+  fill: #eee;
+}
+#eratosthenes-1.focus .earth-cover.fill {
+  fill: rgba(255, 255, 255, 0.9);
+}
+.large-op {
+  position: absolute;
+  top: 60px;
+  font-size: 42px;
+}
+[dir=ltr] .large-op {
+  right: -36px;
+}
+[dir=rtl] .large-op {
+  left: -36px;
+}
+x-geopad.sketch .labels text {
+  stroke: none !important;
+}
+x-geopad.sketch ellipse {
+  stroke: #96969e;
+  stroke-width: 2px;
+  fill: rgba(253, 140, 0, 0.3);
+  transition: opacity 0.2s;
+}
+x-geopad.sketch .light.green,
+x-geopad.sketch .light.teal {
+  opacity: 0.3;
+}
+x-geopad.sketch .light.focus {
+  opacity: 0.6;
+}
+.focus x-geopad.sketch ellipse {
+  opacity: 0.3;
+}
+.sphere-maps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.sphere-maps .left {
+  width: 240px;
+}
+[dir] .sphere-maps .left {
+  margin: 12px;
+}
+.sphere-maps .right {
+  width: 400px;
+  flex-grow: 1;
+}
+[dir] .sphere-maps .right {
+  margin: 12px;
+}
+.sphere-maps svg {
+  width: 100%;
+}
+.sphere-maps .right svg {
+  touch-action: none;
+}
+.sphere-maps .outline {
+  fill: #82bbf4;
+}
+.sphere-maps .grid {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 0.5px;
+}
+.sphere-maps .land {
+  fill: #8cd08d;
+  stroke: #187819;
+  stroke-width: 0.6px;
+}
+.sphere-maps .map-select {
+  stroke: #cd0e66;
+  stroke-width: 2px;
+  fill: rgba(205, 14, 102, 0.4);
+}
+x-conic-section {
+  display: block;
+  cursor: ew-resize;
+  background: url(/resources/circles/images/conics-bg.jpg);
+  background-size: cover;
+}
+[dir] x-conic-section {
+  margin: 1em auto 0;
+}
+[dir] .conics {
+  margin: 2em 0;
+}
+@media screen and (max-width: 640px) {
+  [dir] .conics {
+    margin: 1.5em 0;
+  }
+}
+[dir] .conics p {
+  margin: 0;
+}
+.conics svg {
+  display: block;
+}
+[dir] .conics svg {
+  margin: 0 auto;
+}
+.conics .row > * {
+  position: relative;
+  background: #c5c2cc;
+  box-sizing: border-box;
+  opacity: 0.4;
+  transition: opacity 0.3s, transform 0.3s;
+  cursor: pointer;
+  width: 154px;
+}
+[dir] .conics .row > * {
+  border-radius: 6px;
+  padding: 2px 16px 12px;
+  text-align: center;
+  margin: 12px;
+}
+.conics .row > *:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 100%;
+}
+[dir] .conics .row > *:after {
+  border-bottom: 14px #c5c2cc solid;
+}
+[dir=ltr] .conics .row > *:after {
+  left: 50%;
+  margin-left: -73px;
+  border-left: 73px transparent solid;
+  border-right: 73px transparent solid;
+}
+[dir=rtl] .conics .row > *:after {
+  right: 50%;
+  margin-right: -73px;
+  border-right: 73px transparent solid;
+  border-left: 73px transparent solid;
+}
+.conics .row > *.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+.conics .row > *:hover {
+  opacity: 0.6;
+}
+[dir] .conics .row > *:hover {
+  transform: translateY(-6px);
+}
+.conics .row > *.active {
+  opacity: 1;
+  cursor: default;
+}
+[dir] .conics .row > *.active {
+  transform: translateY(-12px);
+}
+.newton {
+  position: relative;
+}
+.newton.interactive {
+  cursor: pointer;
+}
+.newton img {
+  display: block;
+}
+.newton .over {
+  position: absolute;
+  top: 0;
+}
+.newton .apple {
+  position: absolute;
+  top: 38px;
+}
+[dir=ltr] .newton .apple {
+  left: 144px;
+}
+[dir=rtl] .newton .apple {
+  right: 144px;
+}
+.newton .credit {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+[dir] .newton .credit {
+  padding: 1px 8px;
+}
+[dir=ltr] .newton .credit {
+  border-bottom-left-radius: 4px;
+}
+[dir=rtl] .newton .credit {
+  border-bottom-right-radius: 4px;
+}
+.newton:hover .credit {
+  opacity: 0.8;
+}

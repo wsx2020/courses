@@ -1,0 +1,331 @@
+x-buckets {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #333;
+}[dir] x-buckets {
+  margin: 1.5em 0;
+}
+x-buckets .inputs,
+x-buckets .bucket {
+  position: relative;
+}
+x-buckets .inputs > *,
+x-buckets .bucket > * {
+  position: absolute;
+}
+x-buckets .inputs {
+  z-index: 1;
+}
+x-buckets .buckets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+[dir] x-buckets .buckets {
+  margin: 0 -8px;
+}
+x-buckets .input {
+  cursor: move;
+  background: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  width: 180px;
+  font-size: 16px;
+  line-height: 1.35;
+}
+[dir] x-buckets .input {
+  padding: 5px 12px;
+  margin: 6px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+[dir=ltr] x-buckets .input {
+  transition: left 0.2s, top 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+[dir=rtl] x-buckets .input {
+  transition: right 0.2s, top 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+x-buckets .inputs .input {
+  background: #c5c2cc;
+}
+x-buckets .input.error {
+  background: #e9b0cb;
+  color: #cd0e66;
+}
+x-buckets .input.active {
+  z-index: 1;
+  background: white;
+  color: inherit;
+}
+[dir] x-buckets .input.active {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.45);
+}
+x-buckets .bucket {
+  width: 200px;
+  position: relative;
+  background: #3a3645;
+  transition: box-shadow 0.2s;
+}
+[dir] x-buckets .bucket {
+  border-radius: 8px;
+  margin: 6px;
+  padding-bottom: 6px;
+}
+x-buckets .bucket .title {
+  font-weight: 600;
+  color: white;
+}
+[dir] x-buckets .bucket .title {
+  text-align: center;
+  margin-top: 8px;
+}
+[dir] x-buckets .bucket.active {
+  box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
+}
+article.gameshow .page-background {
+  background: url('/resources/probability/images/lights.jpg') no-repeat center top;
+  background-size: cover;
+}
+[dir] article.gameshow .page-background {
+  background-position: center;
+  transform: translate3D(0, 0, 0);
+}
+.p-line img {
+  display: block;
+}
+[dir=ltr] .p-line img {
+  float: left;
+}
+[dir=rtl] .p-line img {
+  float: right;
+}
+.probTable table {
+  width: 100%;
+  table-layout: fixed;
+}
+.probTable td {
+  overflow: hidden;
+}
+[dir] .probTable td {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+[dir] .probTable tr:last-child td {
+  border-bottom: none;
+}
+.dice {
+  width: 20px;
+  height: 20px;
+  background: #cd0e66;
+  color: white;
+  fill: white;
+  display: inline-block;
+  line-height: 20px;
+  font-size: 80%;
+}
+[dir] .dice {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-align: center;
+}
+.dice.outline {
+  background: rgba(205, 14, 102, 0.2);
+  color: #cd0e66;
+  font-weight: bold;
+  vertical-align: 1px;
+}
+[dir] .dice.outline {
+  border-color: #cd0e66;
+}
+.dice svg {
+  vertical-align: -4px;
+  display: inline-block;
+}
+[dir] .dice-table tr:first-child td {
+  border-bottom: 1px solid #c5c2cc;
+}
+.dice-table td {
+  width: 64px;
+}
+[dir] .dice-table td {
+  padding: 4px 0;
+}
+[dir=ltr] .dice-table td {
+  border-right: 1px solid #c5c2cc;
+}
+[dir=rtl] .dice-table td {
+  border-left: 1px solid #c5c2cc;
+}
+[dir=ltr] .dice-table td:last-child {
+  border-right: none;
+}
+[dir=rtl] .dice-table td:last-child {
+  border-left: none;
+}
+.pBox {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.diceCount {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(15, 130, 242, 0.4);
+}
+.diceProb {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #22ab24;
+  height: 3px;
+}
+x-buckets.independent .input {
+  width: 220px;
+}
+x-buckets.independent .bucket {
+  width: 300px;
+}
+x-buckets.independent .bucket:nth-child(1) {
+  background: #25abb2;
+}
+x-buckets.independent .bucket:nth-child(2) {
+  background: #8157c7;
+}
+.gameshow .btn {
+  background: rgba(255, 255, 255, 0.8);
+  color: #5f034d;
+}
+.gameshow .btn:hover,
+.gameshow .btn:focus {
+  background: white;
+  color: #5f034d;
+}
+.gameshow .btn.disabled,
+.gameshow .btn:disabled {
+  color: #5f034d !important;
+  background: white !important;
+  opacity: 0.2;
+}
+.monty-hall {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
+  z-index: 1;
+  background: url('/resources/probability/images/doorframe.png') no-repeat;
+  background-size: contain;
+}
+[dir] .monty-hall {
+  padding: 21% 0 2em;
+}
+.monty-hall .door-box {
+  width: 16%;
+  position: relative;
+  perspective: 450px;
+  background: url('/resources/probability/images/goat.png');
+  background-size: contain;
+}
+[dir] .monty-hall .door-box {
+  margin: 0 4%;
+  padding-bottom: 24%;
+}
+[dir=ltr] .monty-hall .door-box {
+  float: left;
+}
+[dir=rtl] .monty-hall .door-box {
+  float: right;
+}
+.monty-hall .door-box.car {
+  background-image: url('/resources/probability/images/car.png');
+}
+[dir=ltr] .monty-hall .door-box:first-child {
+  margin-left: 18%;
+}
+[dir=rtl] .monty-hall .door-box:first-child {
+  margin-right: 18%;
+}
+.monty-hall .door-box:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: url('/resources/probability/images/arrow.png') no-repeat;
+  width: 62%;
+  height: 35%;
+  z-index: 10;
+  background-size: contain;
+  top: -24%;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+}
+[dir] .monty-hall .door-box:before {
+  transform: translateY(-40px);
+}
+[dir=ltr] .monty-hall .door-box:before {
+  left: 20%;
+}
+[dir=rtl] .monty-hall .door-box:before {
+  right: 20%;
+}
+.monty-hall.selectable .door-box:hover:before {
+  opacity: 1;
+}
+[dir] .monty-hall.selectable .door-box:hover:before {
+  transform: translateY(-10px);
+}
+.monty-hall .door-box.selected:before {
+  opacity: 1;
+}
+[dir] .monty-hall .door-box.selected:before {
+  transform: none !important;
+}
+.monty-hall .door {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 1s, box-shadow 0.3s;
+  background: url('/resources/probability/images/door.png');
+  background-size: contain;
+}
+[dir=ltr] .monty-hall .door {
+  transform-origin: 0 50%;
+}
+[dir=rtl] .monty-hall .door {
+  transform-origin: 100% 50%;
+}
+.monty-hall.selectable .door {
+  cursor: pointer;
+}
+[dir] .monty-hall .door-box.open .door {
+  transform: rotateY(-95deg);
+}
+.monty-hall .floor {
+  background: url('/resources/probability/images/floor.png');
+  background-size: cover;
+}
+[dir] .monty-hall .floor {
+  clear: both;
+  padding-bottom: 13%;
+}
+.monty-reveal {
+  transition: opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+}
+.monty-reveal.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+[dir] #monty-hall .btn {
+  margin: 0 16px;
+}
+.radioactive circle {
+  fill: #cd0e66;
+}
+.radioactive circle.off {
+  fill: #0f82f2;
+}
+[dir] .radioactive circle.off {
+  transform: scale(0.7);
+}

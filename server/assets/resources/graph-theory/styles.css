@@ -1,0 +1,351 @@
+[dir] .svg-block {
+  margin: 0 0 1em 0;
+}
+x-parallax.full-width {
+  position: relative;
+  height: 480px;
+  width: calc(100vw - 280px);
+}
+[dir] x-parallax.full-width {
+  margin: 1.5em 0;
+}
+[dir=ltr] x-parallax.full-width {
+  left: calc(520px - 50vw);
+}
+[dir=rtl] x-parallax.full-width {
+  right: calc(520px - 50vw);
+}
+@media screen and (max-width: 1120px) {
+  [dir=ltr] x-parallax.full-width {
+    left: -40px;
+  }
+  [dir=rtl] x-parallax.full-width {
+    right: -40px;
+  }
+}
+@media screen and (max-width: 840px) {
+  x-parallax.full-width {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 540px) {
+  [dir=ltr] x-parallax.full-width {
+    left: -24px;
+  }
+  [dir=rtl] x-parallax.full-width {
+    right: -24px;
+  }
+}
+x-parallax.full-width .credit {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 11px;
+}
+[dir] x-parallax.full-width .credit {
+  padding: 1px 8px;
+}
+[dir=ltr] x-parallax.full-width .credit {
+  right: 0;
+}
+[dir=rtl] x-parallax.full-width .credit {
+  left: 0;
+}
+.drawing-path {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.7);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.dark-mode .drawing-path {
+  stroke: rgba(255, 255, 255, 0.8);
+}
+.node {
+  stroke: #f5f5f6;
+  fill: #cd0e66;
+  stroke-width: 2px;
+  cursor: move;
+}
+.link {
+  stroke: #c5c2cc;
+  stroke-width: 2px;
+  fill: transparent;
+}
+.arrow {
+  fill: #c5c2cc;
+}
+.graph {
+  background: #f5f5f6;
+}
+[dir] .graph {
+  border-radius: 4px;
+}
+.dark-mode .node {
+  stroke: #2d2c38;
+}
+.dark-mode .graph {
+  background: #2d2c38;
+}
+#graph0 .node {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+[dir] #graph0 .node {
+  transform: scale(1);
+  transform-origin: center;
+}
+#graph0.novertices .node {
+  cursor: default;
+}
+[dir] #graph0.novertices .node {
+  transform: scale(0);
+}
+#graph0 .link {
+  stroke-dasharray: 70px;
+  stroke-dashoffset: 140px;
+  transition: stroke-dashoffset 1.6s;
+}
+#graph0.noedges .link {
+  stroke-dashoffset: 70px;
+}
+.person {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: #FFF;
+  line-height: 24px;
+  font-weight: 600;
+}
+[dir] .person {
+  text-align: center;
+  border-radius: 20px;
+}
+.handshakes .duplicate {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.complete .handshakes .duplicate {
+  opacity: 0.1;
+}
+.handshakes td {
+  color: #666;
+}
+[dir] .handshakes td {
+  text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  .handshakes {
+    width: 100%;
+    max-width: 500px;
+    line-height: 1.4;
+  }
+  [dir=ltr] .handshakes .person {
+    margin-left: calc(50% - 12px);
+    margin-right: calc(50% - 12px);
+  }
+  [dir=rtl] .handshakes .person {
+    margin-right: calc(50% - 12px);
+    margin-left: calc(50% - 12px);
+  }
+}
+.house {
+  fill: #eee;
+}
+.dark-mode .house {
+  fill: #383742;
+}
+.bridge {
+  fill: #fd8c00;
+  stroke: transparent;
+  stroke-width: 16px;
+  transition: fill 0.2s;
+}
+.bridge.green {
+  fill: #22ab24;
+}
+.bridge.red {
+  fill: #cd0e66;
+}
+.water {
+  fill: #57a8f6;
+}
+[dir] #planarity {
+  margin-top: -20px;
+}
+#planarity circle {
+  fill: #0f82f2;
+  cursor: move;
+  stroke: #cfe6fc;
+  stroke-width: 2.5px;
+}
+#planarity circle.intersect {
+  fill: #cd0e66;
+}
+#planarity line {
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-width: 2.5px;
+}
+#planarity line.intersect {
+  stroke: #cd0e66;
+}
+#konigsberg-proof text {
+  font-weight: 600;
+  text-anchor: middle;
+  fill: white;
+  font-size: 32px;
+}
+.utility {
+  z-index: 10;
+}
+.utility1,
+.utility2,
+.utility3 {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#planar-1 .link,
+#planar-2 .link,
+#planar-3 .link {
+  stroke-width: 3px;
+}
+.box > .btn,
+.tab .btn {
+  position: absolute;
+  bottom: 10px;
+}
+[dir=ltr] .box > .btn, [dir=ltr] .tab .btn {
+  left: 10px;
+}
+[dir=rtl] .box > .btn, [dir=rtl] .tab .btn {
+  right: 10px;
+}
+[dir=ltr] .tab .btn.right {
+  left: auto;
+  right: 10px;
+}
+[dir=rtl] .tab .btn.right {
+  right: auto;
+  left: 10px;
+}
+.four-colour-icons {
+  display: flex;
+  justify-content: center;
+}
+[dir] .four-colour-icons {
+  margin-bottom: 1em;
+}
+.four-colour-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+[dir] .four-colour-icon {
+  border: 5px solid transparent;
+  margin: 0 4px;
+  border-radius: 100%;
+}
+.four-colour-icon.on {
+  opacity: 1;
+}
+[dir] .four-colour-icon.on {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+[dir=ltr] .four-colours .solve {
+  left: auto;
+  right: 10px;
+}
+[dir=rtl] .four-colours .solve {
+  right: auto;
+  left: 10px;
+}
+.four-colours path {
+  transition: 0.2s;
+  cursor: pointer;
+}
+.four-colours path:hover {
+  opacity: 0.8;
+}
+.colour-count {
+  color: #181824;
+  font-size: 22px;
+  font-weight: 600;
+}
+[dir] .colour-count {
+  margin: 8px 0 -12px;
+  text-align: center;
+}
+#dominoes {
+  cursor: pointer;
+}
+#dominoes g rect {
+  fill: #999;
+}
+#dominoes g text {
+  fill: #F2F2F2;
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+#dominoes g {
+  transform-origin: bottom right /* rtl:ignore */;
+  transition: transform 0.1s linear;
+}
+.tsm {
+  background: url(/resources/graph-theory/images/map.jpg);
+  background-size: cover;
+}
+[dir] .tsm {
+  border-radius: 6px;
+}
+.tsm rect {
+  fill: transparent;
+  cursor: pointer;
+}
+.tsm circle {
+  fill: #cd0e66;
+  cursor: move;
+}
+.tsm path {
+  fill: none;
+  stroke: #0f82f2;
+  stroke-width: 6;
+}
+.vertex-orders text {
+  font-size: 18px;
+  fill: #FFF;
+}
+.vertex-orders circle {
+  transition: fill 0.5s;
+}
+.euler-sum {
+  opacity: 0;
+}
+[dir] .euler-sum {
+  margin: 0.4em 0 0;
+  padding-top: 0.4em;
+  border-top: 1px solid #ddd;
+}
+#euler-2 .node {
+  stroke: white;
+}
+.euler-table {
+  position: absolute;
+  background: #e2e1e6;
+  top: 20px;
+  line-height: 1.2;
+}
+[dir] .euler-table {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+[dir=ltr] .euler-table {
+  right: 0;
+}
+[dir=rtl] .euler-table {
+  left: 0;
+}
+[dir] .euler-table p {
+  margin: 0;
+}

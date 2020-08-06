@@ -1,0 +1,929 @@
+[dir] figure .row x-img {
+  margin: 8px;
+}
+.n {
+  display: inline-block;
+  width: 44px;
+  color: white;
+  height: 26px;
+  line-height: 26px;
+  position: relative;
+  font-style: normal;
+  white-space: nowrap;
+}
+[dir] .n {
+  text-align: center;
+  margin: 16px 2px;
+}
+.n:before,
+.n:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+[dir] .n:before, [dir] .n:after {
+  border-bottom: 13px solid;
+}
+[dir=ltr] .n:before, [dir=ltr] .n:after {
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+}
+[dir=rtl] .n:before, [dir=rtl] .n:after {
+  border-right: 22px solid transparent;
+  border-left: 22px solid transparent;
+}
+.n:before {
+  top: -13px;
+}
+.n:after {
+  bottom: -13px;
+}
+[dir=ltr] .n:after {
+  transform: rotate(180deg);
+}
+[dir=rtl] .n:after {
+  transform: rotate(-180deg);
+}
+.s-grey .n {
+  background: #3a3645;
+}
+[dir] .s-grey .n:before, [dir] .s-grey .n:after {
+  border-bottom-color: #3a3645;
+}
+.s-orange .n {
+  background: #eb4726;
+}
+[dir] .s-orange .n:before, [dir] .s-orange .n:after {
+  border-bottom-color: #eb4726;
+}
+.s-purple .n {
+  background: #6d3bbf;
+}
+[dir] .s-purple .n:before, [dir] .s-purple .n:after {
+  border-bottom-color: #6d3bbf;
+}
+.s-teal .n {
+  background: #009ea6;
+}
+[dir] .s-teal .n:before, [dir] .s-teal .n:after {
+  border-bottom-color: #009ea6;
+}
+.s-lime .n {
+  background: #bfc212;
+}
+[dir] .s-lime .n:before, [dir] .s-lime .n:after {
+  border-bottom-color: #bfc212;
+}
+.s-red .n {
+  background: #cd0e66;
+}
+[dir] .s-red .n:before, [dir] .s-red .n:after {
+  border-bottom-color: #cd0e66;
+}
+.s-blue .n {
+  background: #0f82f2;
+}
+[dir] .s-blue .n:before, [dir] .s-blue .n:after {
+  border-bottom-color: #0f82f2;
+}
+.s-green .n {
+  background: #22ab24;
+}
+[dir] .s-green .n:before, [dir] .s-green .n:after {
+  border-bottom-color: #22ab24;
+}
+.s-yellow .n {
+  background: #fd8c00;
+}
+[dir] .s-yellow .n:before, [dir] .s-yellow .n:after {
+  border-bottom-color: #fd8c00;
+}
+.s-vertical .n {
+  width: auto;
+}
+[dir] .s-vertical .n {
+  padding: 3px 8px;
+  margin: 5px 8px;
+}
+[dir] .s-vertical .n:before, [dir] .s-vertical .n:after {
+  border-width: 0 16px 8px 16px;
+}
+[dir=ltr] .s-vertical .n:before, [dir=ltr] .s-vertical .n:after {
+  transform-origin: top left;
+}
+[dir=rtl] .s-vertical .n:before, [dir=rtl] .s-vertical .n:after {
+  transform-origin: top right;
+}
+.s-vertical .n:before {
+  top: 32px;
+}
+[dir=ltr] .s-vertical .n:before {
+  left: -8px;
+  transform: rotate(-90deg);
+}
+[dir=rtl] .s-vertical .n:before {
+  right: -8px;
+  transform: rotate(90deg);
+}
+.s-vertical .n:after {
+  top: 0;
+}
+[dir=ltr] .s-vertical .n:after {
+  right: -77px;
+  transform: rotate(90deg);
+}
+[dir=rtl] .s-vertical .n:after {
+  left: -77px;
+  transform: rotate(-90deg);
+}
+.s-large .n {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+}
+[dir] .s-large .n {
+  margin: 18px 3px;
+}
+[dir] .s-large .n:before, [dir] .s-large .n:after {
+  border-width: 0 25px 15px 25px;
+}
+.s-large .n:before {
+  top: -15px;
+}
+.s-large .n:after {
+  bottom: -15px;
+}
+.s-small .n {
+  width: 36px;
+  height: 22px;
+  line-height: 22px;
+}
+[dir] .s-small .n {
+  margin: 12px 1px;
+}
+[dir] .s-small .n:before, [dir] .s-small .n:after {
+  border-width: 0 18px 11px 18px;
+}
+.s-small .n:before {
+  top: -11px;
+}
+.s-small .n:after {
+  bottom: -11px;
+}
+[dir] .with-arrows .n {
+  margin-top: 32px;
+}
+[dir] .s-large.with-arrows .n {
+  margin-top: 40px;
+}
+.n x-blank-input {
+  display: block;
+  max-width: 120px;
+}
+[dir] .n x-blank-input {
+  margin: 1px 3px;
+}
+.n x-blank-input .target {
+  display: block;
+  height: 24px;
+}
+[dir] .n x-blank-input .target {
+  margin: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+.n x-blank-input input {
+  min-width: 0;
+  display: block;
+  width: 100%;
+  height: 24px;
+}
+.n x-blank-input.done,
+.n x-blank-input.done .target {
+  display: inline;
+  line-height: inherit;
+  color: #87c1f9;
+}
+[dir] .n x-blank-input.done, [dir] .n x-blank-input.done .target {
+  box-shadow: none;
+}
+[dir] .s-large .n x-blank-input {
+  margin: 3px;
+}
+.s-yellow .n x-blank-input.done .target,
+.s-green .n x-blank-input.done .target,
+.s-lime .n x-blank-input.done .target {
+  color: #0f82f2;
+}
+.n .var {
+  color: white;
+}
+.n .arrow {
+  background: transparent url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2042%2042%22%3E%3Cpath%20fill%3D%22%23aaa%22%20d%3D%22M41,41,33,30.86l0,4.49A32.45,32.45,0,0,0,21,33,33.71,33.71,0,0,0,1.77,39.2l1.14,1.65A31.65,31.65,0,0,1,21,35a30.53,30.53,0,0,1,11.06,2.09l-3.85,2.25Z%22/%3E%3C/svg%3E') no-repeat center;
+  position: absolute;
+  font-size: 14px;
+  color: #aaa;
+  top: -40px;
+  width: 32px;
+  height: 32px;
+}
+[dir] .n .arrow {
+  text-align: center;
+}
+[dir=ltr] .n .arrow {
+  left: -23px;
+}
+[dir=rtl] .n .arrow {
+  right: -23px;
+}
+.pattern {
+  display: block;
+  font-size: 80%;
+  color: #999;
+}
+.squares rect {
+  transform-box: fill-box;
+}
+[dir] .squares rect {
+  transform-origin: center;
+}
+.tennis-ball {
+  width: 30px;
+  height: 30px;
+  background: url(/resources/sequences/images/tennis.svg);
+  position: absolute;
+  pointer-events: none;
+}
+[dir] .tennis-ball {
+  border-radius: 30px;
+  border: 1px solid white;
+  margin: -15px;
+}
+.text-wrap {
+  display: block;
+  shape-margin: 24px;
+}
+[dir=ltr] .text-wrap {
+  float: right;
+  margin: 0 0 24px 24px;
+}
+[dir=rtl] .text-wrap {
+  float: left;
+  margin: 0 24px 24px 0;
+}
+@media (max-width: 560px) {
+  [dir] .text-wrap {
+    float: none !important;
+    margin: 0 auto 1em;
+  }
+}
+.row.padded.ag-select {
+  align-items: baseline;
+}
+[dir] .row.padded.ag-select {
+  margin: 2em 0 0;
+}
+[dir] .row.padded.ag-select > * {
+  margin: 0;
+  margin-bottom: 12px;
+}
+[dir=ltr] .row.padded.ag-select > * {
+  text-align: left;
+}
+[dir=rtl] .row.padded.ag-select > * {
+  text-align: right;
+}
+[dir] .row.padded.ag-select > *:nth-child(2n) {
+  margin-bottom: 2em;
+}
+[dir] .row .ag-chart h3 {
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+[dir] .row .ag-chart p {
+  margin: 0;
+}
+.row .ag-chart .var {
+  color: inherit;
+  font-size: 16px;
+}
+[dir] .row .ag-chart x-coordinate-system {
+  margin: 0.5em 0 0 0;
+}
+[dir] .row .ag-chart hr {
+  margin: 0.5em 0;
+}
+.row .ag-chart.s-green x-var,
+.row .ag-chart.s-green .bubble-box {
+  background: #22ab24;
+}
+[dir] .row .ag-chart.s-green .bubble-arrow {
+  border-top-color: #22ab24;
+}
+.ag-equation {
+  max-width: 220px;
+}
+[dir] .ag-equation {
+  margin: 0 auto 0.5em;
+}
+.money-grid td {
+  width: 100px;
+}
+[dir] .money-grid td {
+  padding: 2px 10px;
+}
+[dir] x-step .triangle-sum.padded {
+  margin: 2em 0;
+}
+[dir] .triangle-sum.padded > * {
+  margin: 0;
+  text-align: center;
+}
+.triangle-sum .red circle,
+.triangle-sum circle.red {
+  fill: #fd8c00;
+}
+.triangle-sum .blue circle,
+.triangle-sum circle.blue {
+  fill: #0f82f2;
+}
+.triangle-sum .green circle,
+.triangle-sum circle.green {
+  fill: #22ab24;
+}
+x-tetrahedron {
+  display: block;
+}
+x-tetrahedron canvas {
+  width: 100%;
+  height: auto;
+}
+.eratosthenes {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+[dir] .eratosthenes {
+  margin-bottom: 1em;
+}
+.eratosthenes div {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #3a3645;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.4s, background 0.3s, transform 0.2s;
+}
+[dir] .eratosthenes div {
+  margin: 1px;
+  border-radius: 15px;
+  text-align: center;
+  transition-delay: 0.2s, 0s, 0s;
+}
+.eratosthenes div.l-red {
+  background: #cd0e66;
+}
+.eratosthenes div.l-blue {
+  background: #0f82f2;
+}
+.eratosthenes div.l-green {
+  background: #22ab24;
+}
+.eratosthenes div.l-yellow {
+  background: #fd8c00;
+}
+.eratosthenes div.deleted {
+  opacity: 0.12;
+}
+[dir] .eratosthenes div:active {
+  transform: scale(0.9);
+}
+.eratosthenes + x-gesture {
+  fill: rgba(0, 0, 0, 0.8);
+  stroke: rgba(255, 255, 255, 0.8);
+}
+[dir] x-coordinate-system + .caption {
+  margin-top: -1em;
+}
+.perfect-table {
+  line-height: 1.4;
+}
+[dir] .perfect-table td {
+  padding: 3px 12px;
+}
+.perfect-table tr:nth-child(2n) td {
+  background: #f4f4f4;
+}
+.perfect-table .c {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #cd0e66;
+  color: white;
+}
+[dir] .perfect-table .c {
+  text-align: center;
+  border-radius: 15px;
+}
+.perfect-table .c.small {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 15px;
+  background: #eb4726;
+}
+[dir] .perfect-table .c.small {
+  text-align: center;
+  border-radius: 11px;
+  margin: 2px;
+}
+.perfect-list {
+  max-width: 660px;
+}
+[dir] .perfect-list {
+  margin: 0 auto 1em;
+}
+.hailstone-slider {
+  position: absolute;
+  top: 20px;
+}
+[dir=ltr] .hailstone-slider {
+  right: 20px;
+}
+[dir=rtl] .hailstone-slider {
+  left: 20px;
+}
+.hailstone-slider span:first-child {
+  display: inline-block;
+  background: #cd0e66;
+  line-height: 28px;
+  height: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+[dir=ltr] .hailstone-slider span:first-child {
+  border-radius: 14px 0 0 14px;
+  padding: 0 8px 0 12px;
+}
+[dir=rtl] .hailstone-slider span:first-child {
+  border-radius: 0 14px 14px 0;
+  padding: 0 12px 0 8px;
+}
+[dir=ltr] .hailstone-slider x-var {
+  border-radius: 0 14px 14px 0;
+}
+[dir=rtl] .hailstone-slider x-var {
+  border-radius: 14px 0 0 14px;
+}
+.rabbits {
+  overflow: hidden;
+  position: relative;
+  transition: padding-bottom 0.8s;
+}
+[dir] .rabbits {
+  margin-bottom: 30px;
+  padding-bottom: 10%;
+}
+.rabbits .rabbits-wrap {
+  position: absolute;
+  width: 100%;
+}
+[dir] .rabbits .rabbits-wrap {
+  padding-bottom: 60%;
+}
+.rabbits svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.rabbits line {
+  stroke: #c5c2cc;
+  stroke-width: 2px;
+}
+.rabbits path {
+  stroke: #181824;
+  stroke-width: 2px;
+  fill: none;
+}
+.rabbits polygon {
+  fill: #181824;
+}
+.dark-mode .rabbits path {
+  stroke: white;
+}
+.dark-mode .rabbits polygon {
+  fill: white;
+}
+.rabbits img.rabbit {
+  position: absolute;
+  width: 10%;
+  height: auto;
+}
+.rabbits .n {
+  position: absolute;
+  z-index: 1;
+}
+[dir] .rabbits .n {
+  margin: 0;
+  margin-top: 13px;
+}
+[dir=ltr] .rabbits .n {
+  right: 0;
+}
+[dir=rtl] .rabbits .n {
+  left: 0;
+}
+.golden-spiral .stage {
+  overflow: hidden;
+}
+.golden-spiral svg {
+  transition: transform 0.4s linear;
+}
+[dir] .golden-spiral svg {
+  margin: 0 auto 32px;
+}
+.spirals {
+  position: relative;
+  background-size: cover;
+}
+[dir] .spirals {
+  padding-bottom: 100%;
+  margin-bottom: 1em;
+}
+.spirals .clockwise,
+.spirals .anticlockwise {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-size: cover;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.spirals .clockwise.active,
+.spirals .anticlockwise.active {
+  opacity: 1;
+}
+[dir] .golden-rect svg {
+  margin: 0 auto 8px;
+}
+.golden-rect x-blank-input.done .target {
+  line-height: inherit;
+}
+.golden-art {
+  position: relative;
+  cursor: pointer;
+}
+.golden-art > img {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.golden-art:hover > img {
+  opacity: 0.5;
+}
+.golden-art.active > img {
+  opacity: 1;
+}
+.petals circle {
+  fill: #0d410e;
+  transition: transform 0.3s;
+}
+.petals path {
+  transition: transform 0.3s;
+  fill: #22ab24;
+  stroke: #1a801b;
+}
+[dir=ltr] .petals path {
+  transform-origin: 0 center;
+}
+[dir=rtl] .petals path {
+  transform-origin: 100% center;
+}
+.sunflower-spiral {
+  background: url(/resources/sequences/images/sunflower-bg.jpg) center no-repeat;
+  background-size: 760px 560px;
+}
+[dir] .sunflower-spiral {
+  padding: 10px 0 60px;
+}
+.sunflower-spiral .value {
+  height: 34px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+[dir] .sunflower-spiral .value {
+  text-align: center;
+}
+.sunflower-spiral svg {
+  fill: #fec680;
+}
+[dir] .sunflower-spiral svg {
+  margin: 0 auto;
+}
+[dir] .sunflower-spiral x-slider {
+  margin: 12px auto 40px;
+}
+.sunflower-spiral x-slider .bar {
+  background: rgba(58, 54, 69, 0.6);
+}
+@media screen and (max-width: 440px) {
+  .sunflower-spiral {
+    background-size: 170vw 125vw;
+  }
+}
+.fib-action {
+  -webkit-touch-callout: none;
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  line-height: 28px;
+  cursor: pointer;
+  background: #cd0e66;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s, box-shadow 0.2s;
+}
+[dir] .fib-action {
+  margin: -3px -6px;
+  padding: 0 6px;
+  border-radius: 5px;
+  margin: -3px 2px;
+}
+.caption .fib-action {
+  height: 24px;
+  line-height: 24px;
+}
+.fib-action:hover {
+  background: #f01e7f;
+  color: white;
+}
+[dir] .fib-action:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.pascal-grid {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+[dir] .pascal-grid {
+  margin: 1.5em auto;
+}
+.dark-mode .pascal-grid {
+  color: #181824;
+}
+.pascal-grid .r {
+  display: flex;
+  justify-content: center;
+}
+.pascal-grid .c {
+  width: 40px;
+  font-size: 16px;
+  background-color: #ddd;
+  position: relative;
+  line-height: 24px;
+  transition: color 0.4s, background 0.4s, box-shadow 0.4s, opacity 0.4s;
+}
+[dir] .pascal-grid .c {
+  margin: 1px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.2);
+  padding-bottom: 2px;
+}
+.pascal-grid .c:after {
+  content: "+";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  z-index: 1;
+  background: #3a3645;
+  color: white;
+  line-height: 14px;
+  transition: transform 0.2s;
+}
+[dir] .pascal-grid .c:after {
+  text-align: center;
+  border-radius: 7px;
+  transform: scale(0);
+}
+[dir=ltr] .pascal-grid .c:after {
+  left: -8px;
+}
+[dir=rtl] .pascal-grid .c:after {
+  right: -8px;
+}
+[dir] .pascal-grid .c.plus:after {
+  transform: none;
+}
+.pascal-grid.sums .c:last-child {
+  transition: transform 0.2s;
+}
+[dir] .pascal-grid.sums .c:last-child {
+  transform: scale(0);
+}
+[dir] .pascal-grid.sums .c:last-child.visible {
+  transform: none;
+}
+.pascal-grid.sums .c:last-child:after {
+  content: "=";
+}
+.pascal-grid x-blank-input {
+  display: block;
+}
+.pascal-grid x-blank-input .target {
+  display: block;
+  height: 26px;
+}
+[dir] .pascal-grid x-blank-input .target {
+  margin: 0 0 -2px 0;
+  border-radius: 3px;
+}
+.pascal-grid x-blank-input input {
+  min-width: 0;
+  display: block;
+  width: 100%;
+  height: 24px;
+}
+.pascal-grid x-blank-input.done,
+.pascal-grid x-blank-input.done label {
+  display: inline;
+  line-height: inherit;
+}
+.pascal-grid.small .c {
+  width: 28px;
+  font-size: 10px;
+  line-height: 16px;
+}
+[dir] .pascal-grid.small .c {
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1px;
+  margin: 1px;
+}
+.pascal-grid.small .c .small {
+  font-size: 8px;
+  line-height: 8px;
+}
+.pascal-grid .c.light {
+  opacity: 0.5;
+}
+.pascal-grid .c.yellow,
+.pascal-grid .c.orange,
+.pascal-grid .c.red,
+.pascal-grid .c.purple,
+.pascal-grid .c.blue,
+.pascal-grid .c.teal,
+.pascal-grid .c.green,
+.pascal-grid .c.lime {
+  color: white;
+}
+[dir] .pascal-grid .c.yellow, [dir] .pascal-grid .c.orange, [dir] .pascal-grid .c.red, [dir] .pascal-grid .c.purple, [dir] .pascal-grid .c.blue, [dir] .pascal-grid .c.teal, [dir] .pascal-grid .c.green, [dir] .pascal-grid .c.lime {
+  box-shadow: inset 0 -2px rgba(0, 0, 0, 0.4);
+}
+.pascal-grid .c.yellow {
+  background-color: #fd8c00;
+}
+.pascal-grid .c.orange {
+  background-color: #eb4726;
+}
+.pascal-grid .c.red {
+  background-color: #cd0e66;
+}
+.pascal-grid .c.purple {
+  background-color: #6d3bbf;
+}
+.pascal-grid .c.blue {
+  background-color: #0f82f2;
+}
+.pascal-grid .c.teal {
+  background-color: #009ea6;
+}
+.pascal-grid .c.green {
+  background-color: #22ab24;
+}
+.pascal-grid .c.lime {
+  background-color: #bfc212;
+}
+#pascal-select .c:not(.red) {
+  cursor: pointer;
+}
+.pascal-buttons {
+  position: absolute;
+  top: 10px;
+}
+.pascal-buttons .btn {
+  display: block;
+  width: 120px;
+  font-size: 18px;
+}
+[dir] .pascal-buttons .btn {
+  margin-bottom: 8px;
+}
+[dir] .pascal-tabs {
+  margin-top: 0;
+}
+[dir] .pascal-tabs .titles {
+  margin: 0 auto;
+}
+.pascal-tabs h3 {
+  width: 40px;
+  height: 44px;
+  position: relative;
+  background: currentColor;
+  opacity: 0.5;
+  min-width: 0;
+}
+[dir] .pascal-tabs h3 {
+  border-radius: 6px !important;
+  padding: 0;
+  margin: 8px 4px;
+}
+.pascal-tabs h3:hover {
+  background: currentColor;
+  opacity: 0.7;
+}
+.pascal-tabs h3.active {
+  background: currentColor;
+  opacity: 1;
+}
+.pascal-tabs h3 .check {
+  background-color: transparent;
+  background-size: contain;
+}
+[dir] .pascal-tabs h3 .check {
+  margin: 0;
+}
+.pascal-tabs h3:after {
+  content: "";
+  position: absolute;
+  top: -6px;
+}
+[dir] .pascal-tabs h3:after {
+  border-bottom: 6px currentColor solid;
+}
+[dir=ltr] .pascal-tabs h3:after {
+  border-left: 15px transparent solid;
+  border-right: 15px transparent solid;
+  left: 5px;
+}
+[dir=rtl] .pascal-tabs h3:after {
+  border-right: 15px transparent solid;
+  border-left: 15px transparent solid;
+  right: 5px;
+}
+.pascal-tabs .yellow {
+  color: #fd8c00;
+}
+.pascal-tabs .orange {
+  color: #eb4726;
+}
+.pascal-tabs .red {
+  color: #cd0e66;
+}
+.pascal-tabs .purple {
+  color: #6d3bbf;
+}
+.pascal-tabs .blue {
+  color: #0f82f2;
+}
+.pascal-tabs .teal {
+  color: #009ea6;
+}
+.pascal-tabs .green {
+  color: #22ab24;
+}
+.pascal-tabs .body {
+  transition: background 0.6s;
+}
+[dir] .pascal-tabs .body {
+  padding: 0;
+  text-align: center;
+}
+.pascal-tabs .body.s-yellow {
+  background: rgba(253, 140, 0, 0.2);
+}
+.pascal-tabs .body.s-orange {
+  background: rgba(235, 71, 38, 0.2);
+}
+.pascal-tabs .body.s-red {
+  background: rgba(205, 14, 102, 0.2);
+}
+.pascal-tabs .body.s-purple {
+  background: rgba(109, 59, 191, 0.2);
+}
+.pascal-tabs .body.s-blue {
+  background: rgba(15, 130, 242, 0.2);
+}
+.pascal-tabs .body.s-teal {
+  background: rgba(0, 158, 166, 0.2);
+}
+.pascal-tabs .body.s-green {
+  background: rgba(34, 171, 36, 0.2);
+}

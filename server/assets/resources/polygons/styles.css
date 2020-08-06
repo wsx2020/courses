@@ -1,0 +1,115 @@
+#triangle-inequality .labels text {
+  font-weight: 600;
+}
+[dir] #triangle-inequality .item {
+  margin-bottom: 12px;
+}
+#triangle-inequality .item:before,
+#triangle-inequality .item:after {
+  display: table;
+  content: " ";
+}
+[dir] #triangle-inequality .item:before, [dir] #triangle-inequality .item:after {
+  clear: both;
+}
+[dir] #triangle-inequality .check {
+  margin: 6px;
+}
+[dir=ltr] #triangle-inequality .check {
+  float: right;
+}
+[dir=rtl] #triangle-inequality .check {
+  float: left;
+}
+.t-num {
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  transition: background 0.2s, color 0.2s;
+  background: #f5f5f6;
+}
+[dir] .t-num {
+  text-align: center;
+}
+[dir=ltr] .t-num {
+  float: left;
+  margin-right: 1px;
+}
+[dir=rtl] .t-num {
+  float: right;
+  margin-left: 1px;
+}
+[dir=ltr] .t-num:first-child {
+  border-radius: 18px 0 0 18px;
+}
+[dir=rtl] .t-num:first-child {
+  border-radius: 0 18px 18px 0;
+}
+[dir=ltr] .t-num:nth-child(3) {
+  border-radius: 0 18px 18px 0;
+}
+[dir=rtl] .t-num:nth-child(3) {
+  border-radius: 18px 0 0 18px;
+}
+.t-num.correct {
+  background: #8cd08d;
+}
+.item.correct .t-num {
+  background: #22ab24;
+  color: white;
+}
+#inequality-picker x-picker {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#inequality-picker .item {
+  width: 120px;
+}
+[dir] #inequality-picker .item {
+  border: none;
+  margin: 4px;
+}
+.hover-target {
+  -webkit-touch-callout: none;
+  display: inline-block;
+  position: relative;
+  line-height: 28px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+[dir] .hover-target {
+  margin: -3px -6px;
+  padding: 0 6px;
+  border-radius: 5px;
+}
+.caption .hover-target {
+  height: 24px;
+  line-height: 24px;
+}
+.hover-target:before {
+  content: " ";
+  background: #7acd7c;
+  position: absolute;
+  height: 3px;
+  bottom: 0;
+}
+[dir=ltr] .hover-target:before {
+  left: 5px;
+  right: 5px;
+}
+[dir=rtl] .hover-target:before {
+  right: 5px;
+  left: 5px;
+}
+.hover-target:hover {
+  color: rgba(0, 0, 0, 0.8);
+  background: #7acd7c;
+}
+[dir] .hover-target:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+#triangle-inequality-3 .orange {
+  transition: none;
+}

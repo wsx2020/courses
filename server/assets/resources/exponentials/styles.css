@@ -1,0 +1,137 @@
+sup {
+  font-weight: 600;
+}
+x-atom {
+  display: block;
+}
+[dir] x-atom {
+  margin: 0 auto;
+}
+x-atom canvas {
+  width: 100%;
+  height: auto;
+}
+[dir] .col-grid td {
+  padding: 0.4em 0.6em;
+}
+[dir] .col-grid tr:first-child td {
+  padding: 0 0.6em 0.4em;
+  border: 0;
+}
+.col {
+  background: #fd8c00;
+  height: 120px;
+  width: 50px;
+  transition: opacity 0.2s, transform 1s;
+}
+[dir] .col {
+  margin: 0 auto;
+  transform-origin: center bottom;
+  box-shadow: 0 0 12px 1px rgba(253, 140, 0, 0.6);
+  border-radius: 2px;
+}
+.col.c1,
+.col.c2,
+.col.c3,
+.col.c4 {
+  opacity: 0;
+}
+[dir] .col.c1, [dir] .col.c2, [dir] .col.c3, [dir] .col.c4 {
+  transform: scaleY(0);
+}
+.col.on {
+  opacity: 1;
+}
+[dir] .col.on {
+  transform: none;
+}
+.col.c1 {
+  height: 60px;
+}
+[dir] .col.c1 {
+  margin-top: 60px;
+}
+.col.c2 {
+  height: 30px;
+}
+[dir] .col.c2 {
+  margin-top: 90px;
+}
+.col.c3 {
+  height: 15px;
+}
+[dir] .col.c3 {
+  margin-top: 105px;
+}
+.col.c4 {
+  height: 7.5px;
+}
+[dir] .col.c4 {
+  margin-top: 112.5px;
+}
+.text-wrap {
+  display: block;
+  shape-margin: 24px;
+  shape-outside: circle();
+}
+[dir=ltr] .text-wrap {
+  float: right;
+  margin: 0 0 24px 24px;
+}
+[dir=rtl] .text-wrap {
+  float: left;
+  margin: 0 24px 24px 0;
+}
+@media (max-width: 560px) {
+  [dir] .text-wrap {
+    float: none !important;
+    margin: 0 auto 1em;
+  }
+}
+.decay-box {
+  position: relative;
+  height: 112px;
+}
+.decay-box x-atom {
+  position: absolute;
+  top: 0;
+}
+.decay-box x-atom:first-child {
+  transition: transform 0.4s cubic-bezier(0.33, 1.9, 0.52, 0.7);
+}
+.decay-box x-atom:first-child:active {
+  transition: transform 0.2s;
+}
+[dir] .decay-box x-atom:first-child:active {
+  transform: scale(0.9);
+}
+.decay-box .label {
+  position: absolute;
+  top: 72px;
+  width: 72px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+[dir] .decay-box .label {
+  text-align: center;
+}
+.decay-box .operator {
+  position: absolute;
+  top: 16px;
+  font-size: 20px;
+  color: #333;
+}
+x-algebra-flow x-blank-input input {
+  min-width: 74px;
+  transition: min-width 0.2s;
+}
+x-algebra-flow x-blank-input.invalid input {
+  min-width: 54px;
+}
+[dir] .overflow-wrap {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+[dir] .overflow-wrap table {
+  margin: 0.5em auto;
+}
